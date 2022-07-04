@@ -1,2 +1,2 @@
 # algamoney-ui
-## 09.10 - Usando two-way data binding
+## 09.12 - Exibindo condicionalmente com as diretivas ngIf e hidden
