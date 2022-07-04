@@ -1,2 +1,2 @@
 # algamoney-ui
-## 09.12 - Exibindo condicionalmente com as diretivas ngIf e hidden
+## 09.13 - Iterando com a diretiva ngFor

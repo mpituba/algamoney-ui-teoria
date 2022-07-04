@@ -1,11 +1,4 @@
 <div class="container">
-  <!-- Caixa de alerta disparada com *ngIf, faz mudança
-  na estrutura do DOM, é tem mais custo de processamento -->
-  <div class="alert alert-success" role="alert" *ngIf="adicionado">
-    Funcionário adicionado: <strong>{{nome}}</strong>
-  </div>
-
-
   <!-- Caixa de alerta disparada com diretiva de atributo
     [hidden], é menos custosa não faz mudança no DOM  -->
   <div class="alert alert-success" role="alert"
@@ -18,9 +11,7 @@
 
     <input type="text" class="form-control"
       [(ngModel)]="nome"
-      (focus)="adicionado = false"
-
-    >
+      (focus)="adicionado = false">
   </div>
 
   <button type="button" class="btn btn-primary"
@@ -28,4 +19,15 @@
     Adicionar
   </button>
 
+  <div class="row" style="margin-top: 20px">
+    <div class="col-2" *ngFor="let funcionario of funcionarios">
+      <div class="card">
+        <img class="card-img-top"
+          src="https://randomuser.me/api/portraits/men/{{funcionario.id}}.jpg">
+        <div class="card-block">{{funcionario.nome}}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
