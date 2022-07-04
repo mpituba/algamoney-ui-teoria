@@ -6,12 +6,22 @@
   <div class="mb-3">
     <label class="form-label">Nome</label>
 
+    <!-- usando sintaxe suggar -->
     <input type="text" class="form-control"
-      #nomeInput
+      (input)="alterarNome($event)"
+      [value]="nome"
     >
   </div>
 
+    <!-- Property bind -->
     <button type="button" class="btn btn-primary"
-      (click)="adicionar(nomeInput.value)">Adicionar</button>
+      (click)="adicionar()" bind-disabled="nome.length == 0">
+      Adicionar
+    </button>
 
+    <!-- Property com sintaxe suggar -->
+    <button type="button" class="btn btn-primary"
+      (click)="adicionar()" [disabled]="nome.length == 0">
+      Adicionar2
+    </button>
  </div>
