@@ -1,2 +1,2 @@
 # algamoney-ui
-# 9.7 - Event Binding
+# 9.8 - Usando variável de referência ou template reference variable

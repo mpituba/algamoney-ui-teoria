@@ -9,16 +9,9 @@ export class AppComponent {
   title = 'meuprojeto2';
   nome = 'Marcelo';
 
-  adicionar() {
-    console.log(`Adicionando ${this.nome}`);
-
-    //Gera um número randômico arredondado até 100
-    const numero = Math.round(Math.random() * 100);
-    this.nome = 'João ' + numero;
+  adicionar(nome: string) {
+    this.nome = nome;
   }
 
-  alterarNome(event: any) {
-    //console.log(event);
-    this.nome = event.target.value;
-  }
+
 }
