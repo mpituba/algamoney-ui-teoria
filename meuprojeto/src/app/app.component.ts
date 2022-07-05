@@ -1,3 +1,4 @@
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,24 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'meuprojeto';
-  nome = 'Marcelo';
-  adicionado =false;
 
-  ultimoId=0;
   funcionarios: Funcionario[] = [];
 
-  adicionar() {
-    console.log(`Adicionando ${this.nome}`);
-    this.adicionado = true;
-
-    this.funcionarios.push({
-      id: ++this.ultimoId,
-      nome: this.nome
-    });
+  aoAdicionar(funcionario:any) {
+    this.funcionarios.push(funcionario);
   }
+
 }
 
 interface Funcionario {
   id: number
   nome: string
 }
+

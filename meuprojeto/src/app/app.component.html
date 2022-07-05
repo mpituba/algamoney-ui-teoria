@@ -1,28 +1,10 @@
 <div class="container">
-  <!-- Caixa de alerta disparada com diretiva de atributo
-    [hidden], é menos custosa não faz mudança no DOM  -->
-  <div class="alert alert-success" role="alert"
-    [hidden]="!adicionado">
-    Funcionário adicionado: <strong>{{nome}}</strong>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label">Nome</label>
-
-    <input type="text" class="form-control"
-      [(ngModel)]="nome"
-      (focus)="adicionado = false">
-  </div>
-
-  <button type="button" class="btn btn-primary"
-    (click)="adicionar()" [disabled]="nome.length == 0">
-    Adicionar
-  </button>
+  <app-funcionario-form (funcionarioAdicionado)="aoAdicionar($event)"></app-funcionario-form>
 
   <div class="row" style="margin-top: 20px">
 
     <div class="col-2" *ngFor="let f of funcionarios">
-      <app-funcionario-card [obj]="f"></app-funcionario-card>
+      <app-funcionario-card [funcionario]="f"></app-funcionario-card>
     </div>
 
   </div>
