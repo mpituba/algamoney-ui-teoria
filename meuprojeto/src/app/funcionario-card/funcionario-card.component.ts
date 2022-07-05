@@ -23,4 +23,14 @@ export class FuncionarioCardComponent {
     };
   }
 
+  isAdmin() {
+    return this.funcionario.nome.startsWith('T');
+  }
+
+  /*
+  getClassesCss() {
+      return ['badge', 'badge-default'];
+  }
+  */
+
 }

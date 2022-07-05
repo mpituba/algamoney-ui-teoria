@@ -1,2 +1,2 @@
 # algamoney-ui
-## 09.17 - Estilos CSS dinâmicos com ngStyle
+## 09.18 - Classes CSS dinâmicas com ngClass
