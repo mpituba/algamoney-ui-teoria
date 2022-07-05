@@ -20,9 +20,10 @@ export class FuncionarioFormComponent {
       nome: this.nome
     };
 
+    /*Emite funcionário que é recebido no event bind da tag
+    * <app-funcionario-form> em app.component.html     */
     this.funcionarioAdicionado.emit(funcionario);
 
   }
 
 }
-
