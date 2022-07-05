@@ -1,2 +1,2 @@
 # algamoney-ui
-## 09.16 - Adicionando estilos CSS em componentes
+## 09.17 - Estilos CSS dinâmicos com ngStyle
