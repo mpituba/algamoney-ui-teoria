@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'meuprojeto';
   nome = 'Marcelo';
   adicionado =false;
-  //Variáveis auxiliares do *ngFor e array de imagens
+
   ultimoId=0;
   funcionarios: Funcionario[] = [];
 
